@@ -56,6 +56,23 @@
         button:hover {
             background-color: #333333; /* Cambio de color al pasar el mouse */
         }
+        #bannerContainer {
+        background-color: white;
+        border: 5px solid #FFD1DC;
+        padding: 10px; /* Ajusta según sea necesario */
+        margin: auto auto 0;
+        text-align: center;
+        box-sizing: border-box;
+        background-size: cover; /* Ajusta el tamaño de la imagen al 80% */
+        background-position: center; /* Centra la imagen en el contenedor */
+        background-repeat: no-repeat;
+    }
+
+        #bannerContainer img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+        }
     </style>
     <script>
         function mostrarScript() {
@@ -329,6 +346,9 @@
 
 <body>
     <div id="centerContent">
+        <div id="bannerContainer">
+            <img src="https://i.ibb.co/bBPcdgh/BANNERMG.png" alt="Malevision Logo">
+        </div>
         <h4 style="color: black; font-weight: bold; font-size: 1.5em; background-color: #FFD1DC; border: 2px solid black; padding: 10px;">TU AMIGABLE ASESOR OPINA:</h4>
         <div id="resultadoContainer">
             <div id="resultado"></div>
