@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaleGuardian</title>
+    <link rel="icon" href="https://i.ibb.co/BqwwhJD/logos.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/M76BmTp/OIG.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: black; /* Texto en blanco */
+            overflow-y: auto;
+        }
+
+        #centerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Altura del 100% de la vista */
+        text-align: center;
+        overflow-y: auto; /* Permitir desplazamiento vertical en este contenedor */
+    }
+
+        #seccionIntro,
+        #scriptContainer,
+        #respuestaContainer {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 182, 193, 1); /* Rosa palo con opacidad */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sombra suave */
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #000000; /* Negro */
+            color: #ffffff; /* Texto en blanco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #333333; /* Cambio de color al pasar el mouse */
+        }
+
+        #bannerContainer {
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco opaco */
+        border-radius: 10px;
+    }
+    </style>
+    <script>
+        function mostrarScript() {
+            document.getElementById("seccionIntro").style.display = "none";
+            document.getElementById("scriptContainer").style.display = "block";
+        }
+
+        function procesarRespuestas() {
+            var edad = parseInt(document.getElementById("edad").value);
+            var raza = parseInt(document.getElementById("raza").value);
+            var pudiente = document.getElementById("pudiente").value;
+            var tet = document.getElementById("tet").value;
+            var cayetana = document.getElementById("cayetana").value;
+            var papeles = document.getElementById("papeles").value;
+
+            var rfinal = "";
+
+        if (raza === 1) {
+                // Verificar condiciones adicionales para respuesta personalizada
+                if (pudiente === "True" && tet === "True" && cayetana === "True" && edad >= 18 && edad < 65) {
+                    rfinal = "MENUDO RAMILLETE DE FLORES";
+                } else if (pudiente === "True" && tet === "True" && cayetana === "False" && edad >= 18 && edad < 65) {
+                rfinal = "PIJAPROGRE CACHONDA, EL NIVEL DE RIESGO LO DETERMINA EL COLOR DEL PELO";
+            } else if (pudiente === "True" && tet === "False" && cayetana === "False" && edad >= 18 && edad < 65) {
+                rfinal = "PIJAPROGRE PELIGROSA, LAS MÁS VÍBORAS Y PELIGROSAS, COMPRUEBA SUS PULSERAS PARA TENER UNA ELECCIÓN MÁS CLARA";
+            } else if (pudiente === "False" && tet === "False" && cayetana === "False" && edad >= 18 && edad < 65) {
+                rfinal = "QUE ELIJA TU CORAZÓN, YO NO LO HARÍA A PRIORI, PERO SI ES SIMPÁTICA Y BUENA PERSONA NO ES MALA";
+            } else if (pudiente === "False" && cayetana === "True" && edad >= 18 && edad < 65) {
+                rfinal = "NO EXISTEN CAYETANAS POBRES, TE ESTÁ MINTIENDO, HUYE DE LAS MENTIROSAS";
+            } else if (pudiente === "True" && tet === "False" && cayetana === "True" && edad >= 18 && edad < 65) {
+                rfinal = "CAYETANA MONA, ESTÁS EN BUENA POSICIÓN";
+            } else if (cayetana === "True" && edad < 18) {
+                rfinal = "ES EL FUTURO DE ESPAÑA, ESPERA HASTA QUE CUMPLA 18 HACIENDO DE OJEADOR, SE ENAMORARÁ DE TI POR SER MADURO";
+            } else if (cayetana === "False" && edad < 18) {
+                rfinal = "TE ESTAS JUGANDO LA CARCEL POR NADA, ESTAS ENFERMO";
+            } else if (pudiente === "False" && edad > 65) {
+                rfinal = "LE ESTAS HACIENDO ILUSIONES A UNA SEÑORA MAYOR, NO VAS A HEREDAR NADA Y SU CUÑADO TE VA A PINCHAR LAS RUEDAS DEL COCHE";
+            } else if (pudiente === "True" && edad > 65) {
+                rfinal = "SUGARMOMMY CON EXPERIENCIA, VAS A PASAR LA MEJOR NOCHE DE TU VIDA E IGUAL HEREDAS";
+            } else {
+                rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 2) {
+
+                if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                    rfinal = "BOMBA AFRICANA, EL SUEÑO DE TODO HOMBRE, Y ENCIMA LEGAL. VAS A SER LA ENVIDIA DE TUS AMIGOS";
+                } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SEGURAMENTE SEA HIJA DE UN RAPERO CON GRAN PROYECCIÓN, ATACA PARA CONVERTIRTE EN EL PRODUCTOR MÁS EXITOSO DE LA DÉCADA";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "NO HAY NEGRAS SIN MAMEMELLES O BUMBUM Y RICAS, ESTÁS TRATANDO LA EXCEPCIÓN, HUYE";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SI TE HAS IDO DE VIAJE SEXUAL A AFRICA O CUBA ATACA, SINO HUYE";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SI ESTAS ENAMORADO CIEGAMENTE SI, YO NO LA CONOZCO Y NO LO HARÍA";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "RICA Y NACIONAL, SI ERES UN INTERESADO Y VAS AL DINERO SI, SINO NIDE";
+            } else if (papeles === "True" && edad < 18) {
+                rfinal = "LO TUYO ES ENFERMEDAD";
+            } else if (papeles === "False" && edad < 18) {
+                rfinal = "HUYE, TE VAN A DENUNCIAR EN LA ONU MERECIDAMENTE POR ENFERMO Y EL CHAMÁN TE VA A MALDECIR";
+            } else if (pudiente === "False" && edad > 65) {
+                rfinal = "NO, NI DE COÑA, NO, ¿QUÉ OBTIENES TU DE ESTO A PARTE DE UN POSIBLE TRAUMA Y UNA VENEREA?";
+            } else if (pudiente === "True" && edad > 65) {
+                rfinal = "HISTORIAS NO LE FALTAN, MIENTRAS NADIE TE MIRE PUEDE SER UNA EXPERIENCIA ENRIQUECEDORA, ADEMÁS DE HEREDAR SI LA EDAD ES AVANZADA";
+            } else {
+                rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 3) {
+
+                if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                    rfinal = "LA CHINA MODELICA, NINGUNA MUJER OCCIDENTAL DECONSTRUIDA ALCANZA LA PERFECCIÓN Y PUREZA DE ESTA MUJER";
+                } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SEGURAMENTE TE VAYA A ENGAÑAR, PERO HABRÁ MERECIDO LA PENA Y HABRÁS VIVIDO UN PERÍODO DE TU VIDA QUE POCOS PUEDEN ALCANZAR";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "YO NO LO HARÍA A PRIORI, PERO LA PELA ES LA PELA Y LOS CHINOS RICOS SON EL TRIPLE DE RICOS";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SI ESTAS DE VIAJE EN EL EXTRANJERO SI, SINO TAMBIÉN PERO CON MÁS PRECAUCIÓN. UN ONE NIGHT STAND DE MANUAL";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+                rfinal = "SI TE GUSTAN MUCHO LAS CHINAS SI, O SI QUIERES TACHAR EL PAÍS DEL MAPA PUES TAMBIÉN";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "SI TE GUSTAN MUCHO LAS CHINAS SI, ADEMÁS TIENE DINERO POR LO QUE INCREMENTA EL SI";
+            } else if (papeles === "True" && edad < 18) {
+                rfinal = "NI DE COÑA ERES UN PEDERASTA";
+            } else if (papeles === "False" && edad < 18) {
+                rfinal = "IGUAL LO QUE PRETENDES ES HACER TRATA DE BLANCAS Y NO LIGAR, ESO NO ESTÁ BIEN VISTO A OJOS DE LA LEY";
+            } else if (pudiente === "False" && edad > 65) {
+                rfinal = "NO, ¿QUÉ GANAS HACIENDOLE EL CHIQUILIBUM A UNA ANCIANA CHINA POBRE?";
+            } else if (pudiente === "True" && edad > 65) {
+                rfinal = "NO. LAS CHINAS VIVEN MUCHO, VAS A MORIR TU ANTES Y NO VAS A HEREDAR UNA MIERDA. POR NO HABLAR DE LO QUE HABRÁS CHUPADO LOS AÑOS PREVIOS A TU MUERTE. UNA VIDA DE MIERDA VAMOS";
+            } else {
+                rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 4) {
+
+            if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "ENTIENDO QUE PUEDA SER TENTADOR, ES TODO LO CARNAL QUE UN HOMBRE QUERRÍA. SIN EMBARGO, DEBES ESTAR ALERTA DE TU ENTORNO Y LOCALIZAR A TODOS LOS JÓVENES DE ALREDEDOR ANTES DE TOMAR ALGUNA DECISIÓN";
+            } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SI, SI Y SI, PROBABLEMENTE SU PADRE TENGA ALGÚN POZO DE PETRÓLEO Y TU PODRÁS RASCAR ALGO, O IGUAL MUERES DEGOLLADO EN UN CALLEJÓN, PERO HABRÁ MERECIDO LA PENA INTENTARLO, EL SEXO TE LO LLEVAS";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SI, SI Y SI, PROBABLEMENTE SU PADRE TENGA ALGÚN POZO DE PETRÓLEO Y TU PODRÁS RASCAR ALGO, O IGUAL MUERES DEGOLLADO EN UN CALLEJÓN, PERO HABRÁ MERECIDO LA PENA INTENTARLO";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "ESTAS SON LAS PEORES, UN DESCUIDO Y TU IPHONE ESTÁ EN MARRAKECH Y TU EN LA UCI";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+            rfinal = "NO LO HAGAS, LOS DEL SEGARRO AMIGO VAN A MATARTE ENTRE TERRIBLES SUFRIMIENTOS";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+            rfinal = "SINCERAMENTE, YO NO LO HARÍA. AL SER RICA Y BELLACONA LOS DEL SEGARRO AMEGO LA TIENEN OJEADA. AL ACERCARTE A ELLA SENTIRÁS UN PEQUEÑO ARDOR EN EL HÍGADO, LUEGO TE DESMAYARAS EN EL MEJOR DE LOS CASOS, EN EL PEOR DE LOS CASOS CONOCERÁS A SAN PEDRO.";
+            } else if (edad < 18) {
+            rfinal = "NO JODER NO, MOHAMMED Y SUS AMIGOS TE VAN A ENCONTRAR Y APUÑALAR MERECIDAMENTE";
+            } else if (pudiente === "False" && edad > 65) {
+            rfinal = "NI DE COÑA, SU NIETO HA ROBADO 5 IPHONES EN BARCELONA ESTÁ SEMANA Y SE VA A DAR CUENTA DE QUE TE HAS LIADO CON SU ABUELA, TU SMARTPHONE VA A APARECER EN UN MERCADO PIRATA EN LAS AFUERAS DE RABAL";
+            } else if (pudiente === "True" && edad > 65) {
+            rfinal = "UN SI UN TANTO CERCANO A NO. ES RICA Y VIEJA, ES PERFECTA PARA HACER UN BRAGUETAZO, PERO VAS A ESTAR HASTA SU LECHO O EL TUYO SIN COMER JAMÓN";
+            } else {
+            rfinal = "NO PUEDO VALORAR CORRECTAMENTE, PERO SEGURAMENTE NO, QUE NOS CONOCEMOS";
+            }
+            }
+
+        if (raza === 5) {
+
+            if (pudiente === "True" && tet === "True" && edad >= 18 && edad < 65) {
+                rfinal = "PROBABLEMENTE SE ESTÉ DESFOGANDO CANSADA DE SU PRIMO, COMPRUEBA QUE NINGÚN PRIMO ESTÉ CERCA Y DECIDE, AÚN ASÍ MEJOR QUE NO HAGAS NADA";
+            } else if (pudiente === "True" && tet === "False"  && edad >= 18 && edad < 65) {
+            rfinal = "VAS A ARRIESGARTE LA VIDA POR UNA PERSONA QUE NO MERECE LA PENA, RECAPITULA Y HUYE";
+            } else if (pudiente === "False" && tet === "True"  && edad >= 18 && edad < 65) {
+            rfinal = "POR MUY GUAPA QUE SEA, SI SUENA EL CIGALA DE FONDO ES QUE A TU VIDA LE QUEDAN MINUTOS, ASÍ QUE NO";
+            } else if (pudiente === "False"  && tet === "False" && edad >= 18 && edad < 65) {
+            rfinal = "NO, VAS A OBTENER SIFILIS O UN APUÑALAMIENTO, VIENE EN LA CARTA DEL MENÚ DEL DÍA";
+            } else if (edad < 18) {
+            rfinal = "ESTAS ENFERMO, TIENES A TODO EL CLAN ESPERÁNDOTE CON RAZÓN. DESPIDETE DE TUS SERES QUERIDOS";
+            } else if (edad > 65) {
+            rfinal = "AMAI LA MATRIARCA, HUYE SI NO QUIERES MORIR ENTRE TERRIBLE SUFRIMIENTO";
+            } else {
+            rfinal = "HUYE. NO MIRES ATRÁS, DESCONFÍA DE TODO EL MUNDO A TU ALREDEDOR, CUALQUIERA PUEDE ESCUCHAR CAMARÓN";
+            }
+            }
+
+        if (raza === 7) {
+
+            if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "LA ASIÁTICA MODELICA, NINGUNA MUJER OCCIDENTAL DECONSTRUIDA ALCANZA LA PERFECCIÓN Y PUREZA DE ESTA MUJER";
+            } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "LOS PAPELES ES LO DE MENOS, ESTÁ CHICA TIENE UN IMPERIO DE VENDINGS MACHINES EN JAPÓN, ES TU OPORTUNIDAD, ENCIMA BUEN BODY";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "UN SÍ DE MANUAL, DINERO GRACIAS A SU PADRE CURRELAS EN TOSHIBA Y TU A VIVIR LA VIDA CON UNA MUJER FIEL";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "A NO SER QUE ESTES DE TURISMO SEXUAL POR EL SUDESTE ASIÁTICO, YO NO LO HARÍA, Y AÚN EN EL ESTE ASIÁTICO YO PALPARÍA PRIMERO Y VIGILARÍA TODAS MIS JOYAS";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SI TE GUSTA LAS ASIATICAS (OTAKU) ENTONCES SÍ, SINO NO";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+            rfinal = "DISFRUTA DE LA VIDA DEL MAGNATE DEL SUSHI GRACIAS A CASARTE CON UNA MUJER ASIÁTICA CON LOS VALORES NACIONALES, OLVIDATE DEL FÍSICO ESO NO ES IMPORTANTE, TU VIVE EN LA AUTÉNTICA SALUD";
+            } else if (papeles === "True" && edad < 18) {
+            rfinal = "NI DE COÑA, ES MENOR JODER. SI ESO HAZTE LA DE GASLY Y OJEA A LA SUSODICHA HASTA QUE CUMPLA 18 AÑOS";
+            } else if (papeles === "False" && edad < 18) {
+            rfinal = "NI DE COÑA, Y SI ESTAS EN TAILANDIA AÚN MENOS QUE IGUAL VIENE CON SORPRESA LA NIÑA";
+            } else if (pudiente === "False" && edad > 65) {
+            rfinal = "MUJER SABIA SEGURAMENTE, PUEDE SER UNA GRAN NOCHE A SU LADO. NO VAS A GANAR NADA DE DINERO, PERO VAS A COBRAR EN EXPERIENCIAS";
+            } else if (pudiente === "True" && edad > 65) {
+            rfinal = "MUJER SABIA SEGURAMENTE, PUEDE SER UNA GRAN NOCHE A SU LADO. ENCIMA AL SER ABUELA KAWAI SEGURAMENTE TE ENAMORES AL SER UN MACHISTA OPRESOR Y FINALICES TUS ÚLTIMOS DÍAS CON ELLA ALEGREMENTE, LUEGO CON LO QUE HEREDES TE COMPRARÁS UN VELERO Y LO LLAMARÁS LIBERTAD";
+            } else {
+            rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 6) {
+
+            if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "PERFECTA, LAS MEJORES DONDE TIENEN QUE SERLO, SI TE LLAMA PAPITO LOS PELOS SE TE TIENSAN, Y OTRA COSA TAMBIÉN";
+            } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SI, PROBABLEMENTE SU PADRE SEA PABLO ESCOBAR, MUCHO DINERO Y CON ALTO RIESGO DE QUE EL PADRE PALME Y TU HEREDES TODO. O IGUAL TE PEGAN UN TIRO A TI EN MITAD DEL AMAZONAS Y TE ENTIERRAN ENTRE HECES Y BARRO";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "MIRA, SIENDO SINCERO, NO. PERO AL TENER DINERO IGUAL PERTENECE SU FAMILIA AL REGIMEN DE MADURO EN VENEZUELA Y PUEDES CONSEGUIRTE ALGÚN CARGO ALTO EN ESE PAÍS, PARA ACABAR FUMANDO PUROS EN UNA PLAYA PRECIOSA CON EL ESPÍRITU DE CHAVEZ MIENTRAS TU PAÍS SE MUERE DE HAMBRE";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "LAS PEORES, SOLO TE QUIEREN POR LOS PAPELES, VAS A PASARLO BIEN PERO VAS A ACABAR ENDEUDADO CON UN HIJO LLAMADO KEVIN AL QUE NO PUEDES VER";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+            rfinal = "YO NO LO HARÍA, HAY MUCHOS PECES EN EL MAR Y ESTE NO MERECE LA PENA PARA GASTAR EL CEBO. TAMPOCO LA CONOZCO EH IGUAL ES LA MEJOR PERSONA DEL MUNDO, YO SOLO JUZGO.";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+            rfinal = "PERFECTAS TAMBIÉN, MUCHO DINERO Y SOLO NECESITAN REGALOS CAROS QUE HAS COMPRADO CON SU DINERO PARA SER FELICES, VIDA EN MODO FÁCIL";
+            } else if (papeles === "True" && edad < 18) {
+            rfinal = "NO, ES UNA NIÑA ECUATORIANA CON UN FUTURO, NO TE CARGUES SUS ILUSIONES PUTO PERVERTIDO";
+            } else if (papeles === "False" && edad < 18) {
+            rfinal = "NO, ES UNA NIÑA NO. ¿TU NO CONOCES LA CANTIDAD DE MENORES QUE DESAPARECEN EN MEDELLÍN POR CULPA DE LAS MAFIAS? ERES ESCORIA POR PENSARLO.";
+            } else if (edad > 65) {
+            rfinal = "DEFINITIVAMENTE NO, SI ES LATINA ABUELA SOLTERA EN ESPAÑA ES POR ALGO (PIEDRA MUY USADA)";
+            } else {
+            rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 8) {
+
+            if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
+                rfinal = "PROBABLEMENTE ESTÉ ESCAPANDO DE SU MATRIMONIO DE CONVENIENCIA, AYÚDALA A ESCAPAR DE SU FAMILIA Y BRÍNDALE UNA MEJOR VIDA";
+            } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "ES GUAPA EH, PUES NI LO INTENTES, NI TIENE NI QUIERE PAPELES, PROBABLEMENTE AL TENER SEMEJANTE CUERPO LA HAYAN CASADO A CAMBIO DE UNA CASUCHA DE TIERRA EN CALCULTA CON VALLA ELECTRIFICADA ANTI-TIGRES BENGALA";
+            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SU PADRE LA HA CASADO CON UN CEO TECNOLÓGICO MILLONARIO, PROBABLEMENTE CONTRATE A 3 PARIAS A CAMBIO DE UN CUENCO DE ARROZ PARA MATARTE. CURIOSO PORQUE EL MARIDO ES GAY EN SECRETO Y NECESITA A LA MUJER PARA REFORZAR SUS VINCULOS ECONÓMICOS";
+            } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
+            rfinal = "SI LO HACES CONOCE A QUÉ TE ENFRENTAS. EN JAIPUR TODOS LOS PUTEROS SE LA HAN PASADO POR DELANTE, ES SU FORMA DE SUBSISTIR. SUS PADRES ERAN TAN POBRES QUE NI CASARLA PUDIERON PUES POR UNA CABRA NANAI";
+            } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
+            rfinal = "NO LO HAGAS. LA VAN A MANDAR A LA INDIA ANTES DE QUE TE DES CUENTA. EN UDAIPUR UN MARIDO QUE NO LA VA A VALORAR LA ESTA ESPERANDO PARA PROCREAR Y TENER EL NUEVO CEO DE GOOGLE";
+            } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
+            rfinal = "PROBABLEMENTE ESTÉ ESCAPANDO DE SU MATRIMONIO DE CONVENIENCIA, AYÚDALA A ESCAPAR DE SU FAMILIA Y BRÍNDALE UNA MEJOR VIDA EN UN PUEBLO PERDIDO DE CASTILLA LA MANCHA DONDE NO PUEDAN ENCONTRARLE";
+            } else if (papeles === "True" && edad < 18) {
+            rfinal = "NI DE COÑA, SU PADRE YA SABE CON QUIEN LA VA A CASAR A LOS 18, TU SOLO TE ESTAS METIENDO EN UN BERENJENAL";
+            } else if (papeles === "False" && edad < 18) {
+            rfinal = "NI DE COÑA, SU PADRE YA SABE CON QUIEN LA VA A CASAR A LOS 18 Y ES EN CHENNAI, TU SOLO TE ESTAS METIENDO EN UN BERENJENAL";
+            } else if (pudiente === "False" && edad > 65) {
+            rfinal = "HACE AÑOS SE CASÓ A CAMBIO DE 4 VACAS EN MUMBAI, NO CAIGAS TAN BAJO VALORATE UN POCO";
+            } else if (pudiente === "True" && edad > 65) {
+            rfinal = "VIUDA CACHONDA, AHORA ES AL FINAL LIBRE TRAS FALLECER SU MARIDO IMPUESTO, DISFRUTA";
+            } else {
+            rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+            }
+            }
+
+        if (raza === 9) {
+                rfinal = "¿CON QUÉ COJONES ESTAS HABLANDO? NO CATABLE, A PRIORI, AL NO SABER DE QUÉ RAZA ES, JUZGA POR TI MISMO";
+            }
+
+
+            document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em>";
+
+            // Deshabilitar el botón después de procesar la respuesta
+            var botonProcesar = document.getElementById("procesarButton");
+            botonProcesar.disabled = true;
+
+            // Mostrar botón "Volver a Inicio"
+            var volverAInicioButton = document.createElement("button");
+            volverAInicioButton.textContent = "Volver a Inicio";
+            volverAInicioButton.onclick = function () {
+                location.reload(); // Recargar la página
+                window.scrollTo(0, 0); // Desplazar la ventana al principio
+            };
+
+            // Agregar el botón "Volver a Inicio" al contenedor
+            var respuestaContainer = document.getElementById("respuestaContainer");
+            respuestaContainer.appendChild(document.createElement("br")); // Agregar un salto de línea
+            respuestaContainer.appendChild(volverAInicioButton);
+
+        }
+
+        // Función para mostrar la pregunta de Cayetana y Papeles
+        function mostrarPreguntaCayetanaYPapeles() {
+            var raza = document.getElementById("raza").value;
+            var preguntaCayetanaContainer = document.getElementById("preguntaCayetanaContainer");
+            var preguntaPapelesContainer = document.getElementById("preguntaPapelesContainer");
+
+            // Mostrar la pregunta de Cayetana solo si la raza es igual a 1
+            if (raza == 1) {
+                preguntaCayetanaContainer.style.display = "block";
+                preguntaPapelesContainer.style.display = "none"; // Ocultar pregunta de Papeles
+            } else {
+                preguntaCayetanaContainer.style.display = "none"; // Ocultar pregunta de Cayetana
+
+                // Mostrar la pregunta de Papeles solo si la raza no es igual a 1 ni a 5
+                if (raza == 2 || raza== 3 || raza == 4 || raza == 6 || raza==7 || raza== 8 || raza == 9) {
+                    preguntaPapelesContainer.style.display = "block";
+                } else {
+                    preguntaPapelesContainer.style.display = "none"; // Ocultar pregunta de Papeles
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="centerContent">
+        <div id="bannerContainer">
+            <img src="https://i.ibb.co/bBPcdgh/BANNERMG.png" alt="Malevision Logo">
+        </div>
+    
+        <h4 style="color: black; font-weight: bold; font-size: 1.5em; background-color: #FFD1DC; border: 2px solid black; padding: 10px;">TU AMIGABLE ASESOR OPINA:</h4>
+        <div id="resultadoContainer">
+            <div id="resultado"></div>
+        </div>
+    
+        <div id="seccionIntro">
+            <p>Bienvenido a MaleGuardian, tu amigable asesor en tus momentos de máxima necesidad. Antes de continuar, todo el 
+                contenido promocionado por nuestro asesor se basa en prejuicios y vivencias
+                del propio asesor. No se basa en ninguna realidad.</p>
+
+        <button onclick="mostrarScript()">ASESORAMIENTO</button>
+    </div>
+
+    <div id="scriptContainer" style="display: none;">
+        <p>Ingresa la edad de la susodicha: </p>
+        <input type="number" id="edad" required>
+        <br>
+        <div style="line-height: 0.15;">
+            <p>Ingresa la raza de la dama:</p>
+            <p>1.Blanca</p> 
+            <p>2.Negra</p>    
+            <p>3.China</p>    
+            <p>4.Mora</p>    
+            <p>5.Gitana</p>    
+            <p>6.Panchita</p>    
+            <p>7.Asiática no China</p>    
+            <p>8.India</p>    
+            <p>9.Otras</p>
+        </div>
+        <!-- Utiliza un menú desplegable para la pregunta de raza -->
+        <select id="raza" onchange="mostrarPreguntaCayetanaYPapeles()" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br>
+        <!-- Contenedor para la pregunta de Cayetana -->
+        <div id="preguntaCayetanaContainer" style="display: none;">
+            <p>¿Es Cayetana tu mujer?: </p>
+            <select id="cayetana" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <br>
+        <!-- Contenedor para la pregunta de Papeles -->
+        <div id="preguntaPapelesContainer" style="display: none;">
+            <p>¿Tiene papeles la moza?: </p>
+            <select id="papeles" required>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+        </div>
+        <br>
+        <p>¿Es pudiente la chicarrona?: </p>
+        <!-- Utiliza un menú desplegable para la pregunta de pudiente -->
+        <select id="pudiente" required>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <br>
+        <p>¿Tiene buenas mamelles o un buen bum bum?:</p>
+        <!-- Utiliza un menú desplegable para la pregunta de tet -->
+        <select id="tet" required>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select>
+        <br>
+
+        <button id="procesarButton" onclick="procesarRespuestas()">Procesar Respuestas</button>
+    </div>
+
+    <div id="respuestaContainer">
+    </div>
+
+    <img src="https://i.ibb.co/K2tnv7d/logo.png" alt="Descripción de la imagen" style="width: 150px; height: auto;">
+    
+    <p style="font-style: italic; background-color: #FFD1DC; border: 2px solid black; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">PATROCINADORES:</p>    
+        <a href="https://www.tu1millon.com/offers/PzSzwoL7/checkout" target="_blank">
+        <img src="https://i.ibb.co/cYsTj2R/unnamed.jpg" alt="Descripción de la imagen" style="border: 2px solid black; width: 150px; height: auto;">
+    </a>
+
+</body>
+
+</html>
