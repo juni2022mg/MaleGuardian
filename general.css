@@ -97,3 +97,20 @@ h1 {
         font-size: 44px;
     }
 }
+
+/* Media query para Redmi Note 7 */
+
+@media only screen 
+    and (min-device-width: <tu_valor>)  /* Reemplaza <tu_valor> con el ancho mínimo del dispositivo en píxeles */
+    and (max-device-width: <tu_valor>)  /* Reemplaza <tu_valor> con el ancho máximo del dispositivo en píxeles */
+    and (-webkit-min-device-pixel-ratio: <tu_valor>) {  /* Reemplaza <tu_valor> con el valor de píxeles de relación de tu dispositivo */
+    body {
+        /* Tus estilos específicos para Redmi Note 7 */
+        background-color: #ff0000;  /* Ejemplo de color de fondo rojo */
+    }
+
+    h1 {
+        /* Tus estilos para encabezados en Redmi Note 7 */
+        font-size: 30px;  /* Ejemplo de tamaño de fuente */
+    }
+}
