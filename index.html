@@ -73,6 +73,19 @@
             height: 100%;
             max-width: 100%;
         }
+
+        h4 {
+            color: black;
+            font-weight: bold;
+            font-size: 2em; /* Ajusta el tamaño del texto según tus necesidades */
+            background-color: #FFD1DC;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 1;
+            border-width: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        }
     </style>
     <script>
         function mostrarScript() {
@@ -94,26 +107,40 @@
                 // Verificar condiciones adicionales para respuesta personalizada
                 if (pudiente === "True" && tet === "True" && cayetana === "True" && edad >= 18 && edad < 65) {
                     rfinal = "MENUDO RAMILLETE DE FLORES";
+                    var imagenURL = "https://i.postimg.cc/KY8mVtyy/Captura-de-pantalla-2023-11-17-004538.png";
                 } else if (pudiente === "True" && tet === "True" && cayetana === "False" && edad >= 18 && edad < 65) {
                 rfinal = "PIJAPROGRE CACHONDA, EL NIVEL DE RIESGO LO DETERMINA EL COLOR DEL PELO";
+                var imagenURL = "https://i.postimg.cc/8PLkr1bx/A.jpg";
             } else if (pudiente === "True" && tet === "False" && cayetana === "False" && edad >= 18 && edad < 65) {
                 rfinal = "PIJAPROGRE PELIGROSA, LAS MÁS VÍBORAS Y PELIGROSAS, COMPRUEBA SUS PULSERAS PARA TENER UNA ELECCIÓN MÁS CLARA";
+                var imagenURL = "https://i.ibb.co/HTWzRbd/uglyhip.png"
+            } else if (pudiente === "False" && tet === "True" && cayetana === "False" && edad >= 18 && edad < 65) {
+                rfinal = "PELIGRO, TE VAS A ENAMORAR DE ALGUNA ROJA A CAMBIO DE SEXO Y PASIÓN, COMPRUEBA SUS PULSERAS PARA TENER UNA ELECCIÓN MÁS CLARA";
+                var imagenURL = "https://i.ibb.co/HTWzRbd/uglyhip.png" 
             } else if (pudiente === "False" && tet === "False" && cayetana === "False" && edad >= 18 && edad < 65) {
                 rfinal = "QUE ELIJA TU CORAZÓN, YO NO LO HARÍA A PRIORI, PERO SI ES SIMPÁTICA Y BUENA PERSONA NO ES MALA";
+                var imagenURL = "https://i.postimg.cc/BQX03Jjd/uglypor.png"
             } else if (pudiente === "False" && cayetana === "True" && edad >= 18 && edad < 65) {
                 rfinal = "NO EXISTEN CAYETANAS POBRES, TE ESTÁ MINTIENDO, HUYE DE LAS MENTIROSAS";
+                var imagenURL = "https://i.postimg.cc/tgZ00k7W/liar.png"
             } else if (pudiente === "True" && tet === "False" && cayetana === "True" && edad >= 18 && edad < 65) {
                 rfinal = "CAYETANA MONA, ESTÁS EN BUENA POSICIÓN";
-            } else if (cayetana === "True" && edad < 18) {
+                var imagenURL = "https://i.postimg.cc/WbWf2ZBn/mona.png"
+            } else if (cayetana === "True" && pudiente === "True" && edad < 18) {
                 rfinal = "ES EL FUTURO DE ESPAÑA, ESPERA HASTA QUE CUMPLA 18 HACIENDO DE OJEADOR, SE ENAMORARÁ DE TI POR SER MADURO";
+                var imagenURL = "https://i.postimg.cc/KzfD0SFN/nina.png"
             } else if (cayetana === "False" && edad < 18) {
                 rfinal = "TE ESTAS JUGANDO LA CARCEL POR NADA, ESTAS ENFERMO";
+                var imagenURL = "https://i.postimg.cc/Dzrzk7Sq/jail.png"
             } else if (pudiente === "False" && edad > 65) {
                 rfinal = "LE ESTAS HACIENDO ILUSIONES A UNA SEÑORA MAYOR, NO VAS A HEREDAR NADA Y SU CUÑADO TE VA A PINCHAR LAS RUEDAS DEL COCHE";
+                var imagenURL = "https://i.postimg.cc/brs8JPwV/cuni.png"
             } else if (pudiente === "True" && edad > 65) {
-                rfinal = "SUGARMOMMY CON EXPERIENCIA, VAS A PASAR LA MEJOR NOCHE DE TU VIDA E IGUAL HEREDAS";
+                rfinal = "SUGARMOMMY CON EXPERIENCIA, VAS A PASAR LA MEJOR NOCHE DE TU VIDA E IGUAL HEREDAS, YO NI ME LO PENSABA";
+                var imagenURL = "https://i.postimg.cc/Qx7Gn097/granny.png"
             } else {
                 rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+                var imagenURL = "https://i.postimg.cc/WbdbpGDp/drunk.png"
             }
             }
 
@@ -121,26 +148,37 @@
 
                 if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 65) {
                     rfinal = "BOMBA AFRICANA, EL SUEÑO DE TODO HOMBRE, Y ENCIMA LEGAL. VAS A SER LA ENVIDIA DE TUS AMIGOS";
+                    var imagenURL = "https://i.postimg.cc/ncpg0pJy/blackbomb.png"
                 } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
-                rfinal = "SEGURAMENTE SEA HIJA DE UN RAPERO CON GRAN PROYECCIÓN, ATACA PARA CONVERTIRTE EN EL PRODUCTOR MÁS EXITOSO DE LA DÉCADA";
+                rfinal = "SEGURAMENTE SEA FAMILIA DE UN RAPERO CON GRAN PROYECCIÓN, ATACA PARA CONVERTIRTE EN EL PRODUCTOR MÁS EXITOSO DE LA DÉCADA";
+                var imagenURL = "https://i.postimg.cc/mrHmT543/rap.png"
             } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 65) {
                 rfinal = "NO HAY NEGRAS SIN MAMEMELLES O BUMBUM Y RICAS, ESTÁS TRATANDO LA EXCEPCIÓN, HUYE";
+                var imagenURL = "https://i.postimg.cc/yxZ1jBCg/lies.png"
             } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 65) {
                 rfinal = "SI TE HAS IDO DE VIAJE SEXUAL A AFRICA O CUBA ATACA, SINO HUYE";
+                var imagenURL = "https://i.postimg.cc/13Hqw0Hx/tribe.png"
             } else if (pudiente === "False" && papeles === "True"  && tet === "False" && edad >= 18 && edad < 65) {
                 rfinal = "SI ESTAS ENAMORADO CIEGAMENTE SI, YO NO LA CONOZCO Y NO LO HARÍA";
+                var imagenURL = "https://i.postimg.cc/VvnS6X6V/plumber.png"
             } else if (pudiente === "True" && tet === "False" && papeles === "True" && edad >= 18 && edad < 65) {
                 rfinal = "RICA Y NACIONAL, SI ERES UN INTERESADO Y VAS AL DINERO SI, SINO NIDE";
+                var imagenURL = "https://i.postimg.cc/mrnhym1n/ferrari.png"
             } else if (papeles === "True" && edad < 18) {
                 rfinal = "LO TUYO ES ENFERMEDAD";
+                var imagenURL = "https://i.postimg.cc/Dzrzk7Sq/jail.png"
             } else if (papeles === "False" && edad < 18) {
                 rfinal = "HUYE, TE VAN A DENUNCIAR EN LA ONU MERECIDAMENTE POR ENFERMO Y EL CHAMÁN TE VA A MALDECIR";
+                var imagenURL = "https://i.postimg.cc/8zqqdWPH/shaman.png"
             } else if (pudiente === "False" && edad > 65) {
                 rfinal = "NO, NI DE COÑA, NO, ¿QUÉ OBTIENES TU DE ESTO A PARTE DE UN POSIBLE TRAUMA Y UNA VENEREA?";
+                var imagenURL = "https://i.postimg.cc/SNR5wVnd/uci.png"
             } else if (pudiente === "True" && edad > 65) {
                 rfinal = "HISTORIAS NO LE FALTAN, MIENTRAS NADIE TE MIRE PUEDE SER UNA EXPERIENCIA ENRIQUECEDORA, ADEMÁS DE HEREDAR SI LA EDAD ES AVANZADA";
+                var imagenURL = "https://i.postimg.cc/d31HctV3/lentils.png"
             } else {
                 rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
+                var imagenURL = "https://i.postimg.cc/WbdbpGDp/drunk.png"
             }
             }
 
@@ -299,7 +337,8 @@
             }
 
 
-            document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em>";
+            document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em><br><img src='" + imagenURL + "' alt='Imagen'>";
+
 
             // Deshabilitar el botón después de procesar la respuesta
             var botonProcesar = document.getElementById("procesarButton");
@@ -349,7 +388,7 @@
         <div id="bannerContainer">
             <img src="https://i.ibb.co/bBPcdgh/BANNERMG.png" alt="Malevision Logo">
         </div>
-        <h4 style="color: black; font-weight: bold; font-size: 1.5em; background-color: #FFD1DC; border: 2px solid black; padding: 10px;">MaleGuardian:</h4>
+        <h4>MaleGuardian</h4>
         <div id="resultadoContainer">
             <div id="resultado"></div>
         </div>
@@ -373,7 +412,7 @@
             <p>3.China</p>    
             <p>4.Mora</p>    
             <p>5.Gitana</p>    
-            <p>6.Panchita</p>    
+            <p>6.Latina</p>    
             <p>7.Asiática no China</p>    
             <p>8.India</p>    
             <p>9.Otras</p>
