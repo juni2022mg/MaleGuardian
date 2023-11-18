@@ -165,17 +165,20 @@
                 rfinal = "RICA Y NACIONAL, SI ERES UN INTERESADO Y VAS AL DINERO SI, SINO NIDE";
                 var imagenURL = "https://i.postimg.cc/mrnhym1n/ferrari.png"
             } else if (papeles === "True" && edad < 18) {
-                rfinal = "LO TUYO ES ENFERMEDAD";
-                var imagenURL = "https://i.postimg.cc/Dzrzk7Sq/jail.png"
+                rfinal = "LO TUYO ES ENFERMEDAD, SU PADRE CORRE EL TRIPLE DE RÁPIDO QUE TU Y CUANDO TE ALCANCE VA A SACAR A SU COLEGON EL MACHETE A EXPLICARTE LO QUE HAS HECHO";
+                var imagenURL = "https://i.postimg.cc/qBtXdQPM/machete.png"
             } else if (papeles === "False" && edad < 18) {
                 rfinal = "HUYE, TE VAN A DENUNCIAR EN LA ONU MERECIDAMENTE POR ENFERMO Y EL CHAMÁN TE VA A MALDECIR";
                 var imagenURL = "https://i.postimg.cc/8zqqdWPH/shaman.png"
             } else if (pudiente === "False" && edad > 60) {
                 rfinal = "NO, NI DE COÑA, NO, ¿QUÉ OBTIENES TU DE ESTO A PARTE DE UN POSIBLE TRAUMA Y UNA VENEREA?";
-                var imagenURL = "https://i.postimg.cc/SNR5wVnd/uci.png"
+                var imagenURL = "https://i.postimg.cc/3RF10wZr/chocolate.png"
             } else if (pudiente === "True" && edad > 60) {
                 rfinal = "HISTORIAS NO LE FALTAN, MIENTRAS NADIE TE MIRE PUEDE SER UNA EXPERIENCIA ENRIQUECEDORA, ADEMÁS DE HEREDAR SI LA EDAD ES AVANZADA";
                 var imagenURL = "https://i.postimg.cc/d31HctV3/lentils.png"
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+                rfinal = "MENUDO BOMBÓN DE LICOR, TE VA A QUERER POR TU DINERO Y TU A ELLA POR SU FÍSICO, ES UNA RELACIÓN DE MUTUO ACUERDO PERFECTA. ESO SI, TEN EN CUENTA DE QUE TE VA A PONER LOS CUERNOS EN ALGÚN MOMENTO";
+                var imagenURL = "https://i.postimg.cc/nLLnKLjh/devil.png"
             } else {
                 rfinal = "NO PUEDO VALORAR CORRECTAMENTE, SIGUE A TU CORAZÓN";
                 var imagenURL = "https://i.postimg.cc/WbdbpGDp/drunk.png"
@@ -193,6 +196,9 @@
             } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 60) {
                 rfinal = "YO NO LO HARÍA A PRIORI, PERO LA PELA ES LA PELA Y LOS CHINOS RICOS SON EL TRIPLE DE RICOS";
                 var imagenURL = "https://i.postimg.cc/tJkysqKF/rich.png"
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+                rfinal = "SI ESTAS DE VIAJE EN EL EXTRANJERO SI, SINO TAMBIÉN PERO CON MÁS PRECAUCIÓN. UN ONE NIGHT STAND DE MANUAL";
+                var imagenURL = "https://i.postimg.cc/9Q63FwDv/pool.png"
             } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
                 rfinal = "SI ESTAS DE VIAJE EN EL EXTRANJERO SI, SINO TAMBIÉN PERO CON MÁS PRECAUCIÓN. UN ONE NIGHT STAND DE MANUAL";
                 var imagenURL = "https://i.postimg.cc/9Q63FwDv/pool.png"
@@ -203,8 +209,8 @@
                 rfinal = "SI TE GUSTAN MUCHO LAS CHINAS SI, ADEMÁS TIENE DINERO POR LO QUE INCREMENTA EL SI";
                 var imagenURL = "https://i.postimg.cc/tJkysqKF/rich.png"
             } else if (papeles === "True" && edad < 18) {
-                rfinal = "NI DE COÑA ERES UN PEDERASTA";
-                var imagenURL = "https://i.postimg.cc/Dzrzk7Sq/jail.png"
+                rfinal = "NI DE COÑA ERES UN PEDERASTA Y UNA MALA PERSONA. SU PADRE Y SU TÍO EL DEL BAZAR CHINO TE VA A ENCERRAR EN UN CONGELADOR HASTA EL DÍA DE TU MUERTE.";
+                var imagenURL = "https://i.postimg.cc/RCRktSPD/refrigerator.png"
             } else if (papeles === "False" && edad < 18) {
                 rfinal = "IGUAL LO QUE PRETENDES ES HACER TRATA DE BLANCAS Y NO LIGAR, ESO NO ESTÁ BIEN VISTO A OJOS DE LA LEY";
                 var imagenURL = "https://i.postimg.cc/bJG3G34g/trata.png"
@@ -224,7 +230,10 @@
 
             if (pudiente === "True" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
                 rfinal = "ENTIENDO QUE PUEDA SER TENTADOR, ES TODO LO CARNAL QUE UN HOMBRE QUERRÍA. SIN EMBARGO, DEBES ESTAR ALERTA DE TU ENTORNO Y LOCALIZAR A TODOS LOS JÓVENES DE ALREDEDOR ANTES DE TOMAR ALGUNA DECISIÓN";
-                var imagenURL = "https://i.postimg.cc/x85Rhhm0/worried.png"
+                var imagenURL = "https://i.postimg.cc/y8mY3JGS/worry.png"
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+            rfinal = "NI TE ACERQUES, MOHAMMED Y SUS COLEGONES LA TIENEN VIGILADA, PROBABLEMENTE AL SALIR DE LA DISCO SE LA LLEVEN A UN DESCAMPADO. POR TU SEGURIDAD MANTENTE ALEJADO";
+            var imagenURL = "https://i.postimg.cc/YSNQFbFH/descan.png"
             } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "SI, SI Y SI, PROBABLEMENTE SU PADRE TENGA ALGÚN POZO DE PETRÓLEO Y TU PODRÁS RASCAR ALGO, O IGUAL MUERES DEGOLLADO EN UN CALLEJÓN, PERO HABRÁ MERECIDO LA PENA INTENTARLO, EL SEXO TE LO LLEVAS";
             var imagenURL = "https://i.postimg.cc/J76005jy/sheik.png"
@@ -277,7 +286,7 @@
             var imagenURL = "https://i.postimg.cc/9MpkCBg1/matriarca.png"
             } else {
             rfinal = "HUYE. NO MIRES ATRÁS, DESCONFÍA DE TODO EL MUNDO A TU ALREDEDOR, CUALQUIERA PUEDE ESCUCHAR CAMARÓN";
-            var imagenURL = "https://i.postimg.cc/7LjQnF3d/stabbed.png"
+            var imagenURL = "https://i.postimg.cc/Vs2q5tyF/clan.png"
             }
             }
 
@@ -289,6 +298,9 @@
             } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "LOS PAPELES ES LO DE MENOS, ESTÁ CHICA TIENE UN IMPERIO DE VENDINGS MACHINES EN JAPÓN, ES TU OPORTUNIDAD, ENCIMA BUEN BODY";
             var imagenURL = "https://i.postimg.cc/XqGW1hxt/vending.png"
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+            rfinal = "PROBABLEMENTE SI, PIENSA QUE LA DULZURA ASIÁTICA SE TRANSMITE INDEPENDIENTEMENTE DEL NIVEL DE RIQUEZA DE LA SUSODICHA, ASI QUE SI, YO LO HARÍA. POR LA MAÑANA DESAYUNAS RAMEN CONGELADO Y A SEGUIR CON TU VIDA, LO QUE ES UN ONE NIGHT STAND";
+            var imagenURL = "https://i.postimg.cc/g2zKD9Y0/ramen.png"
             } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "UN SÍ DE MANUAL, DINERO GRACIAS A SU PADRE CURRELAS EN TOSHIBA Y TU A VIVIR LA VIDA CON UNA MUJER FIEL";
             var imagenURL = "https://i.postimg.cc/c1w0Yqg8/toshiba.png"
@@ -306,7 +318,7 @@
             var imagenURL = "https://i.postimg.cc/d36sgXyB/gasly.png"
             } else if (papeles === "False" && edad < 18) {
             rfinal = "NI DE COÑA, Y SI ESTAS EN TAILANDIA AÚN MENOS QUE IGUAL VIENE CON SORPRESA LA NIÑA";
-            var imagenURL = "https://i.postimg.cc/SNR5wVnd/uci.png"
+            var imagenURL = "https://i.postimg.cc/Xv8BwBtP/surprise.png"
             } else if (pudiente === "False" && edad > 60) {
             rfinal = "MUJER SABIA SEGURAMENTE, PUEDE SER UNA GRAN NOCHE A SU LADO. NO VAS A GANAR NADA DE DINERO, PERO VAS A COBRAR EN EXPERIENCIAS";
             var imagenURL = "https://i.postimg.cc/9Qh3y1wX/misho.png"
@@ -327,7 +339,10 @@
             } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "SI, PROBABLEMENTE SU PADRE SEA PABLO ESCOBAR, MUCHO DINERO Y CON ALTO RIESGO DE QUE EL PADRE PALME Y TU HEREDES TODO. O IGUAL TE PEGAN UN TIRO A TI EN MITAD DEL AMAZONAS Y TE ENTIERRAN ENTRE HECES Y BARRO";
             var imagenURL = "https://i.postimg.cc/YSnHxMMt/narco.png"
-            } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 60) {
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+            rfinal = "MUJERES COMO ESTA SON DIFICILES DE SUPERAR. UNA NOCHE CON ELLAS ES PEOR QUE TOMAR FENTANILO EN CUANTO A ADICCIÓN. SI NO ESTAS PREPARADO, QUE NO LO ESTAS, NO TE ACERQUES A ELLA.";
+            var imagenURL = "https://i.postimg.cc/hv4FnyLP/fenta.png"
+            }  else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "MIRA, SIENDO SINCERO, NO. PERO AL TENER DINERO IGUAL PERTENECE SU FAMILIA AL REGIMEN DE MADURO EN VENEZUELA Y PUEDES CONSEGUIRTE ALGÚN CARGO ALTO EN ESE PAÍS, PARA ACABAR FUMANDO PUROS EN UNA PLAYA PRECIOSA CON EL ESPÍRITU DE CHAVEZ MIENTRAS TU PAÍS SE MUERE DE HAMBRE";
             var imagenURL = "https://i.postimg.cc/RZJKmVpD/dictator.png"
             } else if (pudiente === "False" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
@@ -340,8 +355,8 @@
             rfinal = "PERFECTAS TAMBIÉN, MUCHO DINERO Y SOLO NECESITAN REGALOS CAROS QUE HAS COMPRADO CON SU DINERO PARA SER FELICES, VIDA EN MODO FÁCIL";
             var imagenURL = "https://i.postimg.cc/pX4kzSg3/gift.png"
             } else if (papeles === "True" && edad < 18) {
-            rfinal = "NO, ES UNA NIÑA ECUATORIANA CON UN FUTURO, NO TE CARGUES SUS ILUSIONES PUTO PERVERTIDO";
-            var imagenURL = "https://i.postimg.cc/Dzrzk7Sq/jail.png"
+            rfinal = "NO, ES UNA NIÑA ECUATORIANA CON UN FUTURO, NO TE CARGUES SUS ILUSIONES POR TUS PROBLEMAS MENTALES, PUTO PERVERTIDO";
+            var imagenURL = "https://i.postimg.cc/7L5sQ7y5/ecuador.png"
             } else if (papeles === "False" && edad < 18) {
             rfinal = "NO, ES UNA NIÑA NO. ¿TU NO CONOCES LA CANTIDAD DE MENORES QUE DESAPARECEN EN MEDELLÍN POR CULPA DE LAS MAFIAS? ERES ESCORIA POR PENSARLO.";
             var imagenURL = "https://i.postimg.cc/V6tby770/mafia.png"
@@ -362,6 +377,9 @@
             } else if (pudiente === "True" && tet === "True" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "ES GUAPA EH, PUES NI LO INTENTES, NI TIENE NI QUIERE PAPELES, PROBABLEMENTE AL TENER SEMEJANTE CUERPO LA HAYAN CASADO A CAMBIO DE UNA CASUCHA DE TIERRA EN CALCULTA CON VALLA ELECTRIFICADA ANTI-TIGRES BENGALA";
             var imagenURL = "https://i.postimg.cc/1tqXfJN0/tiger.png"
+            } else if (pudiente === "False" && tet === "True" && papeles === "True" && edad >= 18 && edad < 60) {
+            rfinal = "INDIA GENERICA DE BADULAQUE, PODRÍA SER HIJA DE APU EL DE LOS SIMPSONS. PARA UNA NOCHE ESTÁ BIEN, PERO NO TE HAGAS MÁS ILUSIONES QUE SU PADRE QUIERE EXPANDIR EL NEGOCIO Y LA VA A CASAR CON UN DIRECTOR FAMOSO DE BOLLYWOOD";
+            var imagenURL = "https://i.postimg.cc/76kh34ks/badulaque.png"
             } else if (pudiente === "True" && tet === "False" && papeles === "False" && edad >= 18 && edad < 60) {
             rfinal = "SU PADRE LA HA CASADO CON UN CEO TECNOLÓGICO MILLONARIO, PROBABLEMENTE CONTRATE A 3 PARIAS A CAMBIO DE UN CUENCO DE ARROZ PARA MATARTE. CURIOSO PORQUE EL MARIDO ES GAY EN SECRETO Y NECESITA A LA MUJER PARA REFORZAR SUS VINCULOS ECONÓMICOS";
             var imagenURL = "https://i.postimg.cc/XYdskbSt/ceo.png"
@@ -392,13 +410,23 @@
             }
             }
 
-        if (raza === 9) {
+            if (raza === 9) {
+
+            if (edad >= 18 && edad < 60) {
                 rfinal = "¿CON QUÉ COJONES ESTAS HABLANDO? NO CATABLE, A PRIORI, AL NO SABER DE QUÉ RAZA ES, JUZGA POR TI MISMO";
                 var imagenURL = "https://i.postimg.cc/4NC4F6Hq/alien.png"
+            } else if (edad < 18) {
+            rfinal = "¿CON QUÉ JODIDA RAZA ESTAS TRATANDO? BUENO ESO ES LO DE MENOS, DEJA DE HABLAR CON UNA NIÑA INDIGENA DE DIOS SABE DONDE QUE LA POLICIA ESTÁ AL CAER";
+            var imagenURL = "https://i.postimg.cc/fy8D3tDs/native.png"
+            } else if (edad > 60) {
+            rfinal = "HUYE, NO SÉ AÚN CON QUÉ RAZA ESTAS TRATANDO PERO HUYE, IGUAL TIENE JOVENCITOS COMO TU ENCERRADOS EN SU TRASTERO, TU VAS A SER EL SIGUIENTE";
+            var imagenURL = "https://i.postimg.cc/B6hVHxLm/locked.png"
+            } 
             }
 
 
-            document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em><br><img src='" + imagenURL + "' alt='Imagen'>";
+
+            document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em><br><img src='" + imagenURL + "' alt='Imagen' style='max-width: 100%;'>";
 
 
             // Deshabilitar el botón después de procesar la respuesta
