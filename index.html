@@ -424,6 +424,16 @@
             } 
             }
 
+            if (edad > 125) {
+                rfinal = "¿DE VERDAD ESTAS PENSANDO EN FOLLARTE UN DINOSAURIO?";
+                var imagenURL = "https://i.postimg.cc/HnKWV0Z1/dino.png"
+            }
+
+            if (edad === 0) {
+                rfinal = "NO HA NI NACIDO Y YA ESTAS PENSANDO EN HACERTE EL DELICIOSO";
+                var imagenURL = "https://i.postimg.cc/hP1z265X/baby.png"
+            }
+
 
 
             document.getElementById("respuestaContainer").innerHTML = "<strong>TU AMIGABLE ASESOR OPINA:</strong> <em>" + rfinal + "</em><br><img src='" + imagenURL + "' alt='Imagen' style='max-width: 100%;'>";
